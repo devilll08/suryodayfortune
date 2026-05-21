@@ -231,7 +231,7 @@
   }
   .hstat-label {
     font-size: 0.62rem; letter-spacing: 2px;
-    text-transform: uppercase; color: #666;
+    text-transform: uppercase; color: rgba(248,245,239,0.72);
     margin-top: 2px;
   }
 
@@ -283,7 +283,7 @@
   h2 em { font-style: italic; color: var(--gold-light); }
   .about-text {
     font-size: 0.87rem; font-weight: 300;
-    line-height: 1.9; color: rgba(248,245,239,0.6);
+    line-height: 1.9; color: rgba(248,245,239,0.78);
     margin-bottom: 1rem;
   }
   .about-features {
@@ -301,7 +301,7 @@
   }
   .af-icon { font-size: 1.3rem; margin-bottom: 0.6rem; }
   .af-title { font-size: 0.78rem; font-weight: 600; letter-spacing: 1px; color: var(--gold-light); margin-bottom: 0.3rem; }
-  .af-desc { font-size: 0.75rem; color: #666; line-height: 1.6; }
+  .af-desc { font-size: 0.75rem; color: rgba(248,245,239,0.75); line-height: 1.6; }
 
   .about-img-stack {
     position: relative;
@@ -426,7 +426,7 @@
   }
   .why-desc {
     font-size: 0.83rem; font-weight: 300;
-    line-height: 1.8; color: rgba(248,245,239,0.55);
+    line-height: 1.8; color: rgba(248,245,239,0.75);
   }
   .why-icon { font-size: 1.5rem; margin-bottom: 1rem; }
 
@@ -446,7 +446,7 @@
   .contact-tagline em { font-style: italic; color: var(--gold-light); }
   .contact-sub {
     font-size: 0.83rem; font-weight: 300;
-    line-height: 1.8; color: rgba(248,245,239,0.55);
+    line-height: 1.8; color: rgba(248,245,239,0.78);
     margin-bottom: 3rem;
   }
   .contact-details { display: flex; flex-direction: column; gap: 1.5rem; }
@@ -460,10 +460,10 @@
     width: 36px; height: 36px;
     border: 1px solid rgba(201,169,110,0.3);
     display: flex; align-items: center; justify-content: center;
-    font-size: 0.9rem; flex-shrink: 0;
+    font-size: 1.1rem; flex-shrink: 0;
     color: var(--gold);
   }
-  .cdetail-label { font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase; color: #555; margin-bottom: 0.2rem; }
+  .cdetail-label { font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(248,245,239,0.72); margin-bottom: 0.2rem; }
   .cdetail-val { font-size: 0.87rem; color: var(--white); font-weight: 400; }
   .cdetail-val a { color: var(--white); text-decoration: none; }
   .cdetail-val a:hover { color: var(--gold); }
@@ -584,8 +584,13 @@
 
   /* REVEAL ON SCROLL */
   .reveal {
-    opacity: 0; transform: translateY(30px);
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(30px);
   }
   .reveal.visible {
     opacity: 1; transform: translateY(0);

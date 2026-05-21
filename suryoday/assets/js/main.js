@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js');
+
 // Navbar scroll effect
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
